@@ -102,9 +102,9 @@ $html="
       <div class='content-block'>
 		<div class='panel-cover'>
 			<div class='cover'></div>
-			<div class='cover-text'>Hi, ".$_SESSION['username']."
-			<span>".$_SESSION['position']."</span>
-                        <span>".$_SESSION['location']."</span></div>
+			<div class='cover-text'>Hi, Admin
+			<span>Manager</span>
+                        <span>YELLOW</span></div>
 		</div>
         <ul class='panel-content'>
 			<li class='panel-link'>
@@ -141,11 +141,26 @@ $html="
 				<div id='cover'></div>
 				<div class='content'>
          ";
-			   
-			                  
+			                 
+				               $html.="
+                                               <div class='card post-card'>
+			                  <div class='card-header'>
+                                               <div class='post-pesan'>Selamat Datang</div>
+                                               </div>
+
+                                                </div>
+                                               ";
+
+			                   $html.="
+
+
+			      </div>
+			      <br><br><br> <br><br><br><br><br><br><br>";
+
+
 
 			      $html.="<div class='card location'>
-			  <div class='card-header'>Our Location - PIK</div>
+			  <div class='card-header'>Our Location - Yellow</div>
 			  <div class='card-content'>
 				<div class='card-content-inner'>
 				<p>Income Yellow : Rp. 0</p>
