@@ -9,6 +9,7 @@ $password = "yellow123";
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 // Check connection
+echo "Data Refresh".$conn;
 $username=$_POST['username'];
 $password=$_POST['password'];
 
