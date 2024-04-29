@@ -17,7 +17,7 @@ left outer join sky_position p on p.positionid = l.positionid
 left outer join sky_location c on c.locationid = l.locationid
  WHERE username='".$username."' and password='".$password."'";
 
-$result = $conn -> query($sql);
+$result = $conn -> query($login);
 
 $row = $result -> fetch_assoc();
 echo $row["username"];
