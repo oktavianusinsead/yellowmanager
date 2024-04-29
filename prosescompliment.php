@@ -45,7 +45,7 @@ Voucher Super Wash ini hanya berlaku 1 kali<br><br>
 
 $login="INSERT INTO sky_compliment (complimentdate,compliment,userid,redeem) VALUES
                ('".$waktu."','".$notransaksi."','".$userid ."','".$_POST['name']."')";
-
+echo $login;
 $result = $mysqli -> query($login);
 
 }
