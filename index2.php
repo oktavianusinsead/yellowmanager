@@ -1,12 +1,6 @@
 <?php
 //ob_start();
-session_start();
-include "config.php";
-if( isset($_SESSION['username'])=="" ){
- header("Location: index.php");
-}
-else
-{
+// //
 $html="
 <!DOCTYPE html>
 <html>
@@ -392,5 +386,5 @@ _gaq.push(['_trackPageview']);
 
 </html>";
 echo $html;
-}
+//}
 ?>
