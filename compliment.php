@@ -1,6 +1,5 @@
 <?php
-session_start();
-include "config.php";
+
 
 date_default_timezone_set('Asia/Jakarta');
 			                  $waktu= date("d-m-y H:i");
@@ -98,13 +97,13 @@ function myFunction() {
 
                                   ";
 
-                                        $login=mysql_query("SELECT * FROM sky_compliment 
+//                                         $login=mysql_query("SELECT * FROM sky_compliment 
                                         	
-                                         WHERE userid='".$_SESSION['userid']."'");
+//                                          WHERE userid='".$_SESSION['userid']."'");
 
-while($r=mysql_fetch_array($login))
+// while($r=mysql_fetch_array($login))
 
-{
+// {
 				               $html.="
 					<li class='accordion-item'><a href='#' class='item-content item-link'>
             <div class='item-inner'>
@@ -120,7 +119,7 @@ while($r=mysql_fetch_array($login))
             </div>
             </div>
           </li>";
-}
+//}
 
 				  $html.="</ul>
     </div>
