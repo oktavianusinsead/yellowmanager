@@ -16,9 +16,9 @@ $login="SELECT l.*,p.position,c.locationname FROM sky_loginmanager l
 left outer join sky_position p on p.positionid = l.positionid
 left outer join sky_location c on c.locationid = l.locationid
  WHERE username='".$username."' and password='".$password."'";
-echo $login;
 
+$result = $conn -> query($sql);
 
-
-
+$row = $result -> fetch_assoc();
+echo $row["username"];
 ?>
