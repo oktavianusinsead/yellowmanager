@@ -32,6 +32,6 @@ printf ("%s (%s)\n", $row["username"], $row["password"]);
 //$row = $result -> fetch_assoc();
 //echo $row["username"];
 $result -> free_result();
-
+header("Location: index2.php");
 $mysqli -> close();
 ?>
