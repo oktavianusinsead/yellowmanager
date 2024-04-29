@@ -95,11 +95,8 @@ $html="
 		</ul>
       </div>
     </div>";
-     $login=mysql_query("SELECT count(messageid) as total FROM sky_messageadmin   WHERE approve not in ('x') order by messagedate DESC");
+	
 
-$r=mysql_fetch_array($login);
-
-$total=$r['total'];
     $html.="<!-- Right panel with cover effect-->
     <div class='panel panel-right panel-cover'>
       <div class='content-block'>
@@ -144,49 +141,17 @@ $total=$r['total'];
 				<div id='cover'></div>
 				<div class='content'>
          ";
-			                  date_default_timezone_set('Asia/Jakarta');
-			                  $waktu= date("H:i");
-			                  //echo $waktu;
-
-
-			                  $login=mysql_query("SELECT * FROM sky_shoutout WHERE categoryid='1' AND shiftid='1' and CURTIME() between timestart and timeend");
-while($r=mysql_fetch_array($login))
-{
-				               $html.="
-                                               <div class='card post-card'>
-			                  <div class='card-header'>
-                                               <div class='post-pesan'>".$r['pesan']."</div>
-                                               </div>
-
-                                                </div>
-                                               ";
-}
-			                   $html.="
-
-
-			      </div>
-			      <br><br><br> <br><br><br><br><br><br><br>";
-$login3=mysql_query("SELECT sum(cost) as total FROM `sky_transaction` t
-left outer join sky_item i on i.itemid=t.itemid
-
-WHERE i.itemtypeid in ('1') and t.locationid='19'");
-$r3=mysql_fetch_array($login3);
-
-$login4=mysql_query("SELECT sum(cost) as total FROM `sky_transaction` t
-left outer join sky_item i on i.itemid=t.itemid
-
-WHERE i.itemtypeid in ('5') and t.locationid='19'");
-$r4=mysql_fetch_array($login4);
-
+			   
+			                  
 
 			      $html.="<div class='card location'>
 			  <div class='card-header'>Our Location - PIK</div>
 			  <div class='card-content'>
 				<div class='card-content-inner'>
-				<p>Income Yellow : Rp. ".rupiah($r3[total])."</p>
+				<p>Income Yellow : Rp. 0</p>
 				</div>
 				<div class='card-content-inner'>
-				<p>Income Cube Mart: Rp. ".rupiah($r4[total])."</p>
+				<p>Income Cube Mart: Rp. 0</p>
 				</div>
 			  </div>
 
