@@ -1,15 +1,14 @@
 <?php
 
+$mysqli = new mysqli("localhost","yellow","yellow123","yellow");
 
-//session_start();
-$servername = "localhost";
-$username = "yellow";
-$password = "yellow123";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password);
 // Check connection
-echo "Data Refresh".$conn;
+if ($mysqli -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+  exit();
+}
+// Check connection
+echo "Data Refresh".$mysqli;
 $username=$_POST['username'];
 $password=$_POST['password'];
 
