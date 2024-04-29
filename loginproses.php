@@ -2,7 +2,7 @@
 
 
 //session_start();
-$servername = "202.10.36.23";
+$servername = "localhost";
 $username = "yellow";
 $password = "yellow123";
 
