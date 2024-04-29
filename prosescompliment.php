@@ -1,7 +1,12 @@
 <?php
-session_start();
-include "config.php";
-$userid=$_POST['userid'];
+$mysqli = new mysqli("localhost","yellow","yellow123","yellow");
+
+// Check connection
+if ($mysqli -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+  
+}
+$userid=1;
 
 for($i=1;$i<=$_POST['qty'];$i++)
 {
@@ -9,7 +14,7 @@ $jml="15";
 $transactionno=$_POST['transactionno'];
 //$tgl=$_POST['tgl'];
 $platno=$_POST['name'];
-$locationid="19";
+$locationid="22";
 //$jmlh=$_POST['jmlh'];
 date_default_timezone_set('Asia/Jakarta');
 			                  $waktu= date("y-m-d H:i:s");
@@ -38,8 +43,10 @@ echo "
 Voucher Super Wash ini hanya berlaku 1 kali<br><br>
 ";
 
-$login=mysql_query("INSERT INTO sky_compliment (complimentdate,compliment,userid,redeem) VALUES
-               ('".$waktu."','".$notransaksi."','".$userid ."','".$_POST['name']."')");
+$login="INSERT INTO sky_compliment (complimentdate,compliment,userid,redeem) VALUES
+               ('".$waktu."','".$notransaksi."','".$userid ."','".$_POST['name']."')";
+
+$result = $mysqli -> query($login);
 
 }
 
